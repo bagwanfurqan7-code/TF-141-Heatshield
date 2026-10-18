@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary-fixed":"#001e2c","error":"#ffb4ab","surface-tint":"#7bd0ff","on-primary-fixed-variant":"#004c69","on-tertiary-fixed-variant":"#653e00","primary":"#8ed5ff","on-primary":"#00354a","surface-container-lowest":"#010f1e","secondary-fixed-dim":"#3cddc7","secondary-fixed":"#62fae3","on-error-container":"#ffdad6","surface":"#051423","tertiary-container":"#f59e0b","primary-container":"#38bdf8","outline-variant":"#3e484f","on-tertiary-container":"#613b00","on-surface":"#d5e4f9","primary-fixed":"#c4e7ff","inverse-primary":"#00668a","surface-container-low":"#0d1d2c","on-tertiary-fixed":"#2a1700","on-secondary-container":"#004d44","surface-bright":"#2c3a4b","on-tertiary":"#472a00","surface-container":"#122130","background":"#051423","inverse-surface":"#d5e4f9","surface-container-highest":"#273646","on-surface-variant":"#bdc8d1","surface-dim":"#051423","surface-variant":"#273646","primary-fixed-dim":"#7bd0ff","surface-container-high":"#1d2b3b","on-primary-container":"#004965","secondary":"#44e2cd","on-background":"#d5e4f9","error-container":"#93000a","secondary-container":"#03c6b2","outline":"#87929a","inverse-on-surface":"#233242","tertiary-fixed-dim":"#ffb95f","on-secondary":"#003731","on-error":"#690005","tertiary-fixed":"#ffddb8","on-secondary-fixed":"#00201c","on-secondary-fixed-variant":"#005047","tertiary":"#ffc174"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter-desktop":"1.25rem","space-xl":"2rem","margin":"1rem","gutter":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","margin-desktop":"1.5rem","space-lg":"1.25rem","space-md":"0.75rem"},fontFamily:{"headline-md":["Manrope"],"headline-xl-mobile":["Manrope"],"headline-lg":["Manrope"],"headline-sm":["Manrope"],"label-sm":["Inter"],"headline-xl":["Manrope"],"data-table":["Inter"],"label-lg":["Inter"],"data-metric":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"label-md":["Inter"],"body-lg":["Inter"]},fontSize:{"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-xl-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.01em",fontWeight:"700"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-sm":["16px",{lineHeight:"24px",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"600"}],"headline-xl":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"data-table":["13px",{lineHeight:"18px",fontWeight:"400"}],"label-lg":["14px",{lineHeight:"20px",fontWeight:"500"}],"data-metric":["28px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.01em",fontWeight:"500"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low border-r border-outline-variant/30 z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-md border-b border-outline-variant/30 flex items-center gap-space-sm bg-surface-container-lowest/50"><img alt="TF-141 HeatShield Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V14zhUt4gSGzqDrS_H9_y_CKdGpxJcC2bg-QP0MtyGMIDvmNkuEO7aYrr5sIAfwWc3TkBln4Y16dQ9B1eFfrTFWY1Qw9KYi9MexQqWLEcoGfqWZpws2PO2pj-35i-ouQov6_QwLno_4XJynQisD1zj0J4QveEE6PjbQU8II98GhnHv_XzdosDYMji1CWwpHDCWsGV5S4_CulBPCzei_j1GJq5qWBMFTRrEGm89I_4KcTnqjC8GWKjqr444"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-primary tracking-tight truncate leading-none">HeatShield</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate mt-space-xs">TF-141 | MIT-VPU Solapur</span></div></div><div class="px-space-md pt-space-md pb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Telemetry Modules</span></div><nav class="flex flex-col gap-space-xs px-space-sm" data-active-classes="bg-surface-container-high text-primary border-l-2 border-primary font-label-lg"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded transition-colors bg-surface-container-high text-primary border-l-2 border-primary font-label-lg" data-path="overview" href="#"><span class="material-symbols-outlined text-[18px]">home</span><span>Overview</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="explore-data" href="#"><span class="material-symbols-outlined text-[18px]">database</span><span>Explore Data</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="heat-map" href="#"><span class="material-symbols-outlined text-[18px]">map</span><span>Heat Map</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="submit-reading" href="#"><span class="material-symbols-outlined text-[18px]">add_circle</span><span>Submit a Reading</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="methodology" href="#"><span class="material-symbols-outlined text-[18px]">menu_book</span><span>Methodology</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="admin-review" href="#"><span class="material-symbols-outlined text-[18px]">verified_user</span><span>Admin / Review</span></a></nav></div><div class="p-space-md border-t border-outline-variant/30 bg-surface-container-lowest/60 flex flex-col gap-space-sm"><div class="flex items-center justify-between"><span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-secondary/10 border border-secondary/30 font-label-sm text-label-sm text-secondary"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>Solapur Urban Pilot v1.2</span></div><div class="text-outline font-label-sm text-label-sm leading-relaxed"><span class="text-on-surface-variant block font-medium">Academic Research Credits</span>Team TF-141: Furqan B., Aman S., Bhavin S.</div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur border-b border-outline-variant/30 z-40 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant"><span class="hover:text-primary transition-colors cursor-pointer">HeatShield</span><span class="text-outline">/</span><span class="text-on-surface font-medium">Study Area</span></div><div class="h-4 w-px bg-outline-variant/40 hidden sm:block"></div><div class="hidden sm:flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded border border-outline-variant/40"><span class="material-symbols-outlined text-secondary text-[16px]">location_city</span><span class="font-label-sm text-label-sm text-on-surface font-medium">Live Study Area: Solapur Municipal Corp (SMC)</span></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded border border-outline-variant/30 font-label-sm text-label-sm text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-secondary"></span><span>Sensor sync: 14m ago (Station AWS-04)</span></div><div class="hidden md:inline-flex items-center gap-1 px-2 py-1 rounded bg-tertiary-container/10 border border-tertiary-container/40 font-label-sm text-label-sm text-tertiary" title="Simulation & real-time test deployment metrics"><span class="material-symbols-outlined text-[14px]">science</span><span>Illustrative Demo Data</span></div><button aria-label="Notifications" class="p-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-primary rounded-full"></span></button><div class="h-6 w-px bg-outline-variant/40"></div><div class="flex items-center gap-space-sm pl-space-xs cursor-pointer group"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLerF4yaLdcM0Cp2ORJ_i2qbR43iKNXwu_FDjj2-LUhCxktxYdhk9CfemGMgek2JU0Xx1wAAjx4y7DOBoCMsE625O9OpiFKl1Jom8wpf2MF9htFCO-CQKTQro1tlYOaibo_s6rU4a_V5SkLv2AAbXw4iyTGg8QmfIhGk32MukoQcyiEnVpW7ACW1agX8_kkcYxV3jaZhUuhTXr6Hf9L4ci5YqfNJYgH8TMqJja38xx4hoQX6v-c27YiA"/><div class="flex flex-col text-left"><span class="font-label-sm text-label-sm font-semibold text-on-surface group-hover:text-primary transition-colors leading-none">Aman Shaikh</span><span class="font-label-sm text-label-sm text-outline mt-0.5 leading-none">EDA & Visuals</span></div><span class="material-symbols-outlined text-outline text-[16px] group-hover:text-on-surface transition-colors">expand_more</span></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<section class="relative px-space-md lg:px-space-xl pt-space-lg pb-space-xl overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-stretch gap-space-xl">
+<div class="flex-1 flex flex-col justify-between py-space-sm z-10">
+<div class="flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-sm self-start bg-surface-container-high px-space-sm py-1 rounded">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">TF-141</span>
+<span class="text-outline text-label-sm">/</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">MIT Vishwaprayag University, Solapur</span>
+<span class="ml-space-xs bg-surface-container-highest text-primary font-label-sm text-[10px] px-1.5 py-0.5 rounded uppercase">Pilot Fieldwork</span>
+</div>
+<div class="flex flex-col gap-space-xs mt-space-sm">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-semibold">Urban Microclimate Observatory</span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight leading-tight">
+              Understand Heat.<br/>
+<span class="text-primary">Identify Risk.</span><br/>
+              Inform Cooling.
+            </h1>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+            Explore documented ambient temperature observations and environmental variance patterns to support empirical, evidence-based urban heat resilience across Solapur and adjacent semi-arid industrial corridors.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md pt-space-lg">
+<a class="inline-flex items-center justify-center gap-space-sm bg-primary-container text-on-primary font-label-lg text-label-lg px-space-lg py-2.5 rounded font-semibold hover:bg-primary transition-colors shadow-sm" data-path="dashboard" href="#">
+<span>Explore Dashboard</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center gap-space-sm bg-surface-container-high text-on-surface font-label-lg text-label-lg px-space-lg py-2.5 rounded font-medium hover:bg-surface-bright transition-colors" href="#limitations">
+<span class="material-symbols-outlined text-[18px] text-primary">menu_book</span>
+<span>Understand the Data</span>
+</a>
+<div class="sm:ml-auto flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span>Sensor v1.2 Protocol active</span>
+</div>
+</div>
+</div>
+<div class="flex-1 w-full flex flex-col justify-center">
+<div class="bg-surface-container rounded-xl p-space-lg shadow-xl relative overflow-hidden flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">sensors</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold tracking-wide uppercase">Illustrative Solapur Pilot Grid</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono mt-0.5">17.6599° N, 75.9064° E · Elevation 458m MSL</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>SYNCHRONIZED</span>
+</div>
+</div>
+<div class="relative w-full h-56 bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center">
+<svg class="absolute inset-0 w-full h-full opacity-30" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="32" id="telemetry-grid" patternunits="userSpaceOnUse" width="32">
+<path class="text-outline-variant" d="M 32 0 L 0 0 0 32" fill="none" stroke="currentColor" stroke-width="0.75"></path>
+</pattern>
+<radialgradient cx="62%" cy="48%" id="thermal-core" r="45%">
+<stop offset="0%" stop-color="#f59e0b" stop-opacity="0.85"></stop>
+<stop offset="35%" stop-color="#ffc174" stop-opacity="0.45"></stop>
+<stop offset="70%" stop-color="#38bdf8" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#051423" stop-opacity="0"></stop>
+</radialgradient>
+<radialgradient cx="28%" cy="70%" id="industrial-heat" r="30%">
+<stop offset="0%" stop-color="#ffb4ab" stop-opacity="0.9"></stop>
+<stop offset="50%" stop-color="#f59e0b" stop-opacity="0.4"></stop>
+<stop offset="100%" stop-color="#051423" stop-opacity="0"></stop>
+</radialgradient>
+</defs>
+<rect fill="url(#telemetry-grid)" height="100%" width="100%"></rect>
+<rect fill="url(#thermal-core)" height="100%" width="100%"></rect>
+<rect fill="url(#industrial-heat)" height="100%" width="100%"></rect>
+<ellipse class="text-tertiary-container/60" cx="62%" cy="48%" fill="none" rx="120" ry="70" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1"></ellipse>
+<ellipse class="text-tertiary-container/90" cx="62%" cy="48%" fill="none" rx="80" ry="45" stroke="currentColor" stroke-width="1.25"></ellipse>
+<ellipse class="text-error/70" cx="28%" cy="70%" fill="none" rx="60" ry="35" stroke="currentColor" stroke-width="1"></ellipse>
+</svg>
+<div class="absolute top-4 left-6 flex flex-col pointer-events-none">
+<span class="font-label-sm text-label-sm text-outline uppercase font-mono">SECTOR: SMC-NORTH</span>
+<span class="font-data-table text-data-table text-on-surface font-semibold">Bhavani Peth Zone</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">37.8°C / 18% RH</span>
+</div>
+<div class="absolute top-10 right-8 flex flex-col items-end pointer-events-none">
+<span class="font-label-sm text-label-sm text-error uppercase font-mono tracking-wider font-semibold">PEAK CANOPY LST</span>
+<span class="font-data-metric text-data-metric text-on-surface font-mono font-bold leading-none">42.4<span class="text-body-sm text-outline font-normal">°C</span></span>
+<span class="font-label-sm text-label-sm text-tertiary font-mono">Saat Rasta Junction</span>
+</div>
+<div class="absolute bottom-4 left-6 flex items-center gap-space-sm bg-surface-container-high/90 px-space-sm py-1 rounded">
+<div class="w-2 h-2 rounded-full bg-error animate-ping"></div>
+<span class="font-label-sm text-label-sm text-on-surface font-mono">Old MIDC Industrial: Extreme Heat Trap (+4.2°C anomaly)</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="font-mono">ISOTHERM CALIBRATION</span>
+<span>30°C — 44°C (Ambient Microclimatic Gradient)</span>
+</div>
+<div class="w-full h-2 rounded bg-surface-container-lowest flex overflow-hidden">
+<div class="h-full w-1/5 bg-secondary"></div>
+<div class="h-full w-1/5 bg-primary"></div>
+<div class="h-full w-1/5 bg-primary-container"></div>
+<div class="h-full w-1/5 bg-tertiary-container"></div>
+<div class="h-full w-1/5 bg-error"></div>
+</div>
+<div class="flex justify-between font-label-sm text-[10px] text-on-surface-variant font-mono">
+<span>30°C (Vegetative)</span>
+<span>33.5°C</span>
+<span>37.0°C (Mean)</span>
+<span>40.5°C</span>
+<span>44.0°C (Critical)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-space-md lg:px-space-xl py-space-xl bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-semibold">Analytical Framework</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Core Telemetry Pillars</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Structured methodology translating raw IoT ambient sensors and spatial satellite datasets into municipal intervention directives.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container p-space-lg rounded-xl flex flex-col justify-between hover:bg-surface-container-high transition-colors shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">timeline</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold pt-space-xs">Explore Temperature Patterns</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Temporal analysis tracking acute diurnal fluctuations, nocturnal heat retention cycles, and continuous multi-station anomalies across Solapur's urban core.
+            </p>
+</div>
+<div class="pt-space-md flex items-center gap-space-xs text-primary font-label-sm text-label-sm font-semibold">
+<span>Diurnal Peak: 14:30 – 16:15 IST</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<div class="bg-surface-container p-space-lg rounded-xl flex flex-col justify-between hover:bg-surface-container-high transition-colors shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">hub</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold pt-space-xs">Understand Spatial Coverage</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Synthesized observation combining stationary AWS benchmarks with calibrated citizen telemetry for high-density microclimate mapping across SMC ward sectors.
+            </p>
+</div>
+<div class="pt-space-md flex items-center gap-space-xs text-secondary font-label-sm text-label-sm font-semibold">
+<span>4 Reference Nodes + 18 Mobile Transects</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<div class="bg-surface-container p-space-lg rounded-xl flex flex-col justify-between hover:bg-surface-container-high transition-colors shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded bg-tertiary-container/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">park</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold pt-space-xs">Support Evidence-Based Cooling</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Actionable prioritization matrices for passive urban adaptations: identifying hyper-local targets for reflective cool roofs, hydration kiosks, and urban greening corridors.
+            </p>
+</div>
+<div class="pt-space-md flex items-center gap-space-xs text-tertiary font-label-sm text-label-sm font-semibold">
+<span>Urban Heat Index Prioritization</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-space-md lg:px-space-xl py-space-xl bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold">Live Telemetry Cluster</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Active Solapur Benchmark Stations</h2>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-outline">Network State:</span>
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-secondary font-mono">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>4 OF 4 OPERATIONAL
+          </span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline font-mono">STN-01 · MIDC</span>
+<span class="w-2 h-2 rounded-full bg-error"></span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Old MIDC Industrial</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dense paved surface & textile mills</span>
+</div>
+<div class="pt-space-lg flex items-baseline justify-between">
+<div class="flex items-baseline gap-1">
+<span class="font-data-metric text-data-metric text-on-surface font-bold">41.8</span>
+<span class="font-body-sm text-body-sm text-outline font-medium">°C</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-error-container/40 text-error font-medium">+3.8°C anomaly</span>
+</div>
+</div>
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline font-mono">STN-02 · CENTRAL</span>
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Saat Rasta Circle</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">High-volume transit interchange</span>
+</div>
+<div class="pt-space-lg flex items-baseline justify-between">
+<div class="flex items-baseline gap-1">
+<span class="font-data-metric text-data-metric text-on-surface font-bold">39.4</span>
+<span class="font-body-sm text-body-sm text-outline font-medium">°C</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-medium">+1.4°C anomaly</span>
+</div>
+</div>
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline font-mono">STN-03 · SOUTH</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Jule Solapur Suburbs</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Medium-density residential zone</span>
+</div>
+<div class="pt-space-lg flex items-baseline justify-between">
+<div class="flex items-baseline gap-1">
+<span class="font-data-metric text-data-metric text-on-surface font-bold">36.1</span>
+<span class="font-body-sm text-body-sm text-outline font-medium">°C</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-secondary/10 text-secondary font-medium">Baseline level</span>
+</div>
+</div>
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline font-mono">STN-04 · TRANSPORT</span>
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Railway Colony Area</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Semi-shaded institutional canopy</span>
+</div>
+<div class="pt-space-lg flex items-baseline justify-between">
+<div class="flex items-baseline gap-1">
+<span class="font-data-metric text-data-metric text-on-surface font-bold">35.6</span>
+<span class="font-body-sm text-body-sm text-outline font-medium">°C</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-primary/10 text-primary font-medium">-0.5°C canopy delta</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-space-md lg:px-space-xl py-space-xl bg-surface-container-lowest" id="limitations">
+<div class="max-w-7xl mx-auto">
+<div class="bg-surface-container-high rounded-xl p-space-lg flex flex-col md:flex-row items-start gap-space-lg">
+<div class="w-10 h-10 rounded bg-tertiary/10 flex-shrink-0 flex items-center justify-center text-tertiary mt-1">
+<span class="material-symbols-outlined text-[24px]">info</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Scope, Boundary & Technical Limitations Notice</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Data hosted within HeatShield reflects research-grade ambient dry-bulb air temperature observations collected at 2.0 meters above ground surface across Solapur Municipal Corporation (SMC) administrative boundaries. This telemetry captures microclimatic shelter variance rather than Land Surface Temperature (LST) derived from satellite radiometry. Station observations do not substitute official synoptic warnings issued by the India Meteorological Department (IMD).
+          </p>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-space-xs pt-space-xs font-label-sm text-label-sm text-outline">
+<span>Spatial Extent: 178.57 km² SMC boundary</span>
+<span>·</span>
+<span>Sampling Interval: 10 minutes</span>
+<span>·</span>
+<span>Sensor Calibration Drift Index: ±0.35°C</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="px-space-md lg:px-space-xl py-space-xl bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">TF-141 HeatShield</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Academic Heat Observatory initiative anchored at the Department of Computer Science & Engineering, MIT Vishwaprayag University, Solapur.
+          </p>
+<a class="inline-flex items-center gap-space-xs text-primary font-label-md text-label-md font-medium hover:underline pt-space-xs" data-path="methodology" href="#">
+<span>Read Research Methodology & Calibration Log</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold tracking-wider">Research Team (TF-141)</span>
+<div class="flex flex-col gap-space-xs font-body-sm text-body-sm">
+<div class="flex items-center justify-between py-1 bg-surface-container px-space-sm rounded">
+<span class="text-on-surface font-medium">Furqan Bagwan</span>
+<span class="text-outline text-label-sm">Frontend Engineering & GIS UI</span>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container px-space-sm rounded">
+<span class="text-on-surface font-medium">Aman Shaikh</span>
+<span class="text-outline text-label-sm">EDA & Microclimatic Visuals</span>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container px-space-sm rounded">
+<span class="text-on-surface font-medium">Bhavin Shankur</span>
+<span class="text-outline text-label-sm">Backend Pipeline & InfluxDB</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold tracking-wider">Academic Notice</span>
+<p class="font-body-sm text-body-sm text-outline leading-relaxed bg-surface-container-low p-space-sm rounded">
+            Developed strictly for academic research, urban analytics training, and evidence-based planning exercises at MIT-VPU. Not a certified governmental meteorological service or life-safety broadcast.
+          </p>
+<span class="font-label-sm text-label-sm text-outline-variant mt-auto">© 2025 TF-141 Research Group · Solapur Pilot v1.2</span>
+</div>
+</div>
+</div>
+</footer>
+</div></main></div></body></html>
