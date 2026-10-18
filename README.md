@@ -13,6 +13,22 @@
 [![Database](https://img.shields.io/badge/Database-PostgreSQL%20%7C%20MySQL-green.svg)](#database-design)
 [![Data Status](https://img.shields.io/badge/Dataset-Synthetic%20Simulation-yellow.svg)](#dataset-and-data-integrity-disclosure)
 
+---
+
+## Team Name, Members, and Work Distribution
+
+### Team Identifier: **TF-141**
+**Institution**: MIT Vishwaprayag University (MIT-VPU), Solapur  
+**Course Track**: Semester III Integrated Project (FSD-1 + DBMS + EDADV)
+
+| Team Member | Student ID | Primary Responsibility | Key Deliverables |
+|---|---|---|---|
+| **Furqan Bagwan** | `SCFU425004` | **Frontend** | User interface design, responsive layout, dashboard views, data filters, interactive maps, and component architecture. |
+| **Aman Shaikh** | `SCFU425013` | **Exploratory Data Analysis & Data Visualization (EDADV)** | Data cleaning, statistical profiling, correlation modeling, QA validation reports, and publication-ready analytical charts. |
+| **Bhavin Shankur** | `SCFU425014` | **Backend and Database** | 3NF relational schema design, PostgreSQL/Supabase and MySQL DDL migrations, ETL loading logic, and REST API specification. |
+
+---
+
 HeatShield is an academic urban heat exposure analysis and cooling-intelligence platform developed for the **Solapur Urban Agglomeration, Maharashtra, India** (covering the simulation period 2021–2025). Built as an integrated Semester III project combining **Full Stack Development (FSD)**, **Database Management Systems (DBMS)**, and **Exploratory Data Analysis and Data Visualization (EDADV)**, HeatShield computationally organizes microclimate data, examines thermal exposure dynamics, and models cooling intervention priorities.
 
 ### The Problem HeatShield Addresses
@@ -27,13 +43,13 @@ Urban environments frequently experience pronounced spatial variations in temper
 
 ## Table of Contents
 
-- [Data Disclaimer](#dataset-and-data-integrity-disclosure)
 - [Team Information](#team-name-members-and-work-distribution)
+- [Project Overview](#the-problem-heatshield-addresses)
+- [Data Disclaimer](#dataset-and-data-integrity-disclosure)
 - [Project Objectives](#project-objectives)
 - [System Architecture](#architecture-overview)
 - [Repository Structure](#repository-structure)
 - [Main Features](#main-features)
-- [Dataset & Data Integrity](#dataset-and-data-integrity-disclosure)
 - [Database Design](#database-design)
 - [Data Visualizations](#data-visualizations)
 - [Technology Stack](#technology-stack)
@@ -57,19 +73,6 @@ Please note the following analytical boundaries:
 
 ---
 
-## Team Name, Members, and Work Distribution
-
-### Team Identifier: **TF-141**
-**Institution**: MIT Vishwaprayag University (MIT-VPU), Solapur
-
-| Team Member | Student ID | Primary Responsibility | Key Deliverables |
-|---|---|---|---|
-| **Furqan Bagwan** | `SCFU425004` | **Frontend** | User interface design, responsive layout, dashboard views, data filters, interactive maps, and component architecture. |
-| **Aman Shaikh** | `SCFU425013` | **Exploratory Data Analysis & Data Visualization (EDADV)** | Data cleaning, statistical profiling, correlation modeling, QA validation reports, and publication-ready analytical charts. |
-| **Bhavin Shankur** | `SCFU425014` | **Backend and Database** | 3NF relational schema design, PostgreSQL/Supabase and MySQL DDL migrations, ETL loading logic, and REST API specification. |
-
----
-
 ## Project Objectives
 
 1. **Quantify Thermal Patterns**: Analyze ambient air temperature ($T_{air}$) and land surface temperature ($LST$) dynamics across diurnal and seasonal cycles.
@@ -88,14 +91,14 @@ The platform is designed around a structured data pipeline separating raw simula
 
 ```mermaid
 flowchart TD
-    A[Synthetic Simulation Dataset<br/>150,000 Records | 57 Features] --> B[Data Validation & Integrity Profiling<br/>Range Checks, Null Audit, Thermodynamic Rules]
-    B --> C[3NF Relational Database<br/>PostgreSQL / Supabase & MySQL]
-    B --> D[Exploratory Data Analysis<br/>Statistical & Spatial Modeling]
-    C --> E[Backend REST API<br/>Python Flask - In Progress]
-    D --> F[Analytical Visualizations<br/>10 High-Resolution PNG Figures]
-    E --> G[Frontend Web Dashboard<br/>React + Vite - In Progress]
+    A["Synthetic Simulation Dataset (150,000 Records, 57 Features)"] --> B["Data Validation and Integrity Profiling"]
+    B --> C["3NF Relational Database (PostgreSQL / Supabase and MySQL)"]
+    B --> D["Exploratory Data Analysis (Statistical and Spatial Analysis)"]
+    C --> E["Backend REST API (Python Flask - In Progress)"]
+    D --> F["Analytical Visualizations (10 Generated PNG Figures)"]
+    E --> G["Frontend Web Dashboard (React and Vite - In Progress)"]
     F --> G
-    G --> H[Thermal Exposure Insights &<br/>Cooling Intervention Decisions]
+    G --> H["Thermal Exposure Insights and Cooling Intervention Decisions"]
 ```
 
 ---
