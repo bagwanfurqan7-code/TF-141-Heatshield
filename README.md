@@ -21,6 +21,20 @@
 
 ---
 
+## GitHub and Deployment Readiness
+
+This repository is configured for professional GitHub collaboration and Vercel-ready frontend deployment.
+
+- Frontend root: repository root itself (`React + Vite + Tailwind + Leaflet + Recharts`)
+- Backend status: no working Flask service is currently committed in this repository; the project is still in the frontend + data/analytics stage
+- Vercel: the frontend is ready for a standard Vite deployment with SPA rewrite support via `vercel.json`
+- Render: no backend code is present yet, so a Render service is intentionally not created until the Flask API is added and verified
+- CI: a minimal GitHub Actions workflow runs `npm ci` and `npm run build` on push and pull request
+
+This keeps the current repo clean, reproducible, and deployable without inventing a nonfunctional backend.
+
+---
+
 ## Team Name, Members, and Work Distribution
 
 ### Team Identifier: **TF-141**
@@ -336,19 +350,57 @@ To inspect datasets, run analytical scripts, or generate additional plots:
 
 ---
 
-### 4. Application Environment Configuration *(Pending Integration)*
+### 4. Frontend Application Execution (React + Vite)
 
-When configuring the web client and API, create local environment configuration files (never commit real credentials to version control):
+The frontend is built using **React 18 + Vite + Tailwind CSS + Leaflet + Recharts**:
+
+1. Install frontend dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the local Vite development server:
+   ```bash
+   npm run dev
+   ```
+   The application will be accessible at `http://localhost:3000/`.
+
+3. Build the optimized production bundle:
+   ```bash
+   npm run build
+   ```
+   The production-ready artifacts are compiled into `dist/`.
+
+4. Environment Configuration (`.env.local` / `.env`):
+   ```bash
+   # Target Flask REST API Base URL
+   VITE_API_BASE_URL=http://localhost:5000/api
+   ```
+   *Note: If the backend is not yet running, HeatShield automatically falls back to curated in-situ Solapur facts and NASA POWER reanalysis grid points, ensuring zero-latency offline presentation readiness.*
+
+### 5. Vercel Deployment Checklist
+
+The frontend is designed for straightforward deployment to Vercel:
+
+1. Import the GitHub repository into Vercel.
+2. Set the project root to the repository root if it contains the Vite app directly.
+3. Framework preset: `Vite`
+4. Build command: `npm run build`
+5. Output directory: `dist`
+6. Optional environment variable in production:
+   ```bash
+   VITE_API_BASE_URL=https://your-render-backend-url.example/api
+   ```
+7. Publish the project. The included `vercel.json` ensures direct navigation to routes such as `/dashboard`, `/heat-map`, and `/submit-reading` does not return a 404.
+
+### 6. Render Backend Status
+
+There is currently no Flask backend code committed in this repository. Until a backend service is added, Render configuration should not be invented. When the application is ready for a backend, use a Python web service with a Gunicorn start command such as:
 
 ```bash
-# Example Frontend Configuration (.env.local - placeholder values)
-VITE_SUPABASE_URL=https://your-project-id.supabase.co
-VITE_SUPABASE_ANON_KEY=your_public_anon_key_here
-VITE_API_BASE_URL=http://localhost:5000/api
+gunicorn app:app
 ```
 
-> [!NOTE]
-> Detailed instructions for starting the Flask backend server and Vite frontend development server will be finalized as code integration milestones are completed.
+and configure production environment variables and CORS explicitly once the API is implemented.
 
 ---
 
@@ -365,7 +417,8 @@ VITE_API_BASE_URL=http://localhost:5000/api
   * ✅ 12-section mathematical and physical QA validation passed.
   * ✅ Complete 3NF relational schemas implemented for PostgreSQL and MySQL.
   * ✅ 10 publication-quality analytical visualization figures created.
-  * 🟡 Frontend React UI and Python Flask backend REST API currently under active development.
+  * ✅ Production-ready frontend application complete (5 telemetry pages, interactive Leaflet CartoDB dark heat map, Recharts analytical dashboards, table filters, and CSV export).
+  * 🟡 Python Flask backend REST API endpoints undergoing integration.
 
 ---
 
