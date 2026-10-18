@@ -1,0 +1,101 @@
+location_id,location_name,zone_type,city,state,country,latitude,longitude,elevation_m,population_density_per_km2,distance_to_green_space_m,distance_to_water_m,cooling_infrastructure_present,cooling_infrastructure_type,vulnerable_population_index
+SOL-LOC-001,Jule Solapur Sector 1 - D-Mart Enclave,Residential,Solapur,Maharashtra,India,17.6325,75.894,462,19500,320,2800,True,Trees,38.0
+SOL-LOC-002,Jule Solapur Sector 4 - Asara Chowk Enclave,Residential,Solapur,Maharashtra,India,17.639,75.901,460,22000,250,2500,True,Trees,42.0
+SOL-LOC-003,Bhavani Peth Traditional Residential Quarter,Residential,Solapur,Maharashtra,India,17.668,75.912,456,32500,680,1100,False,None,68.0
+SOL-LOC-004,Murarji Peth Core Residential Lane,Residential,Solapur,Maharashtra,India,17.662,75.908,455,34000,750,950,False,None,72.0
+SOL-LOC-005,Budhwar Peth Dense Residential Cluster,Residential,Solapur,Maharashtra,India,17.665,75.917,454,31000,620,1200,False,None,65.0
+SOL-LOC-006,Navi Peth Residential Outskirts,Residential,Solapur,Maharashtra,India,17.671,75.904,457,28000,510,1400,False,None,58.0
+SOL-LOC-007,Majrewadi Housing Board Colony,Residential,Solapur,Maharashtra,India,17.648,75.932,452,16000,420,900,True,Trees,44.0
+SOL-LOC-008,Ashok Chowk Residential Enclave,Residential,Solapur,Maharashtra,India,17.657,75.919,455,29500,580,1350,False,None,64.0
+SOL-LOC-009,Vijapur Road Housing Society Phase 1,Residential,Solapur,Maharashtra,India,17.625,75.885,465,15500,310,3200,True,Trees,35.0
+SOL-LOC-010,Vijapur Road Housing Society Phase 2,Residential,Solapur,Maharashtra,India,17.618,75.879,468,14200,360,3600,True,Trees,36.0
+SOL-LOC-011,Kumtha Naka Residential Extension,Residential,Solapur,Maharashtra,India,17.643,75.925,453,24000,490,1600,False,None,52.0
+SOL-LOC-012,Degaon Nagar Housing Layout,Residential,Solapur,Maharashtra,India,17.635,75.862,470,12000,450,2900,True,Trees,40.0
+SOL-LOC-013,Soregaon Residential Colony,Residential,Solapur,Maharashtra,India,17.622,75.915,462,13500,380,2400,True,Trees,41.0
+SOL-LOC-014,Shelgi Residential Layout Block A,Residential,Solapur,Maharashtra,India,17.692,75.928,459,16800,290,1900,True,Trees,43.0
+SOL-LOC-015,Shelgi Residential Layout Block B,Residential,Solapur,Maharashtra,India,17.698,75.934,461,14500,340,2200,True,Trees,39.0
+SOL-LOC-016,Bale Gaon Residential Expansion,Residential,Solapur,Maharashtra,India,17.705,75.875,466,11500,410,3400,True,Trees,37.0
+SOL-LOC-017,Nehru Nagar Municipal Colony,Residential,Solapur,Maharashtra,India,17.674,75.892,460,26500,540,1500,False,None,60.0
+SOL-LOC-018,Kegaon Teachers Colony,Residential,Solapur,Maharashtra,India,17.688,75.852,472,10800,320,3800,True,Trees,32.0
+SOL-LOC-019,Pratap Nagar Urban Colony,Residential,Solapur,Maharashtra,India,17.645,75.898,461,21000,280,2600,True,Trees,45.0
+SOL-LOC-020,Shastri Nagar Residential Pocket,Residential,Solapur,Maharashtra,India,17.659,75.924,454,27500,610,1300,False,None,62.0
+SOL-LOC-021,Guru Nanak Nagar,Residential,Solapur,Maharashtra,India,17.678,75.908,457,23500,440,1700,False,None,50.0
+SOL-LOC-022,Indira Nagar Informal Settlement,Residential,Solapur,Maharashtra,India,17.652,75.938,451,36000,820,850,False,None,78.0
+SOL-LOC-023,Karnik Nagar Middle Income Enclave,Residential,Solapur,Maharashtra,India,17.682,75.918,458,20500,360,1950,True,Trees,44.0
+SOL-LOC-024,Modi Khana Old Quarter,Residential,Solapur,Maharashtra,India,17.666,75.903,457,33500,720,1150,False,None,70.0
+SOL-LOC-025,Antrolikar Nagar Layout,Residential,Solapur,Maharashtra,India,17.636,75.889,463,17500,330,2900,True,Trees,39.0
+SOL-LOC-026,Saiful Housing Complex,Residential,Solapur,Maharashtra,India,17.629,75.874,466,18200,350,3100,True,Trees,42.0
+SOL-LOC-027,Damani Nagar Co-op Society,Residential,Solapur,Maharashtra,India,17.685,75.899,459,19000,310,1800,True,Trees,41.0
+SOL-LOC-028,Vasant Nagar Green Suburb,Residential,Solapur,Maharashtra,India,17.615,75.892,465,13000,220,2700,True,Trees,34.0
+SOL-LOC-029,Navi Peth Textile Wholesale Market,Commercial,Solapur,Maharashtra,India,17.6695,75.9065,456,24500,820,1250,False,None,55.0
+SOL-LOC-030,Saat Rasta Central Commercial Hub,Commercial,Solapur,Maharashtra,India,17.652,75.9035,459,21000,450,1800,False,None,48.0
+SOL-LOC-031,Cloth Market Bhavani Peth Arcade,Commercial,Solapur,Maharashtra,India,17.667,75.91,455,26000,890,1050,False,None,58.0
+SOL-LOC-032,Station Road Commercial Strip,Commercial,Solapur,Maharashtra,India,17.6745,75.914,454,22500,650,1400,False,None,52.0
+SOL-LOC-033,Samrat Chowk Retail Plaza,Commercial,Solapur,Maharashtra,India,17.6605,75.9145,455,23000,740,1200,False,None,54.0
+SOL-LOC-034,Murarji Peth Wholesale Grocery Market,Commercial,Solapur,Maharashtra,India,17.6635,75.9055,456,25000,810,1000,False,None,56.0
+SOL-LOC-035,Old Poona Naka Commercial Center,Commercial,Solapur,Maharashtra,India,17.679,75.898,458,19500,680,1600,False,None,46.0
+SOL-LOC-036,Chhatrapati Shivaji Maharaj Chowk Mall,Commercial,Solapur,Maharashtra,India,17.664,75.909,455,24000,710,1100,False,None,53.0
+SOL-LOC-037,Pangul Galli Jewelry & Retail Cluster,Commercial,Solapur,Maharashtra,India,17.6665,75.9085,456,27000,860,1150,False,None,57.0
+SOL-LOC-038,Budhwar Peth Vegetable & Fruit Mandi,Commercial,Solapur,Maharashtra,India,17.663,75.916,454,28000,780,1180,False,None,62.0
+SOL-LOC-039,Vijapur Road Big Bazaar Complex,Commercial,Solapur,Maharashtra,India,17.6305,75.8895,464,17500,380,3000,True,Shade Structure,40.0
+SOL-LOC-040,Jule Solapur Commercial Complex,Commercial,Solapur,Maharashtra,India,17.635,75.8975,462,18500,310,2700,True,Trees,42.0
+SOL-LOC-041,Hotgi Road Trade Tower Strip,Commercial,Solapur,Maharashtra,India,17.641,75.915,458,16000,520,2100,False,None,44.0
+SOL-LOC-042,Akkalkot Road Agro Market Yard,Commercial,Solapur,Maharashtra,India,17.653,75.932,452,15000,640,1700,False,None,51.0
+SOL-LOC-043,MIDC Chincholi Heavy Fabrications Sector A,Industrial,Solapur,Maharashtra,India,17.708,75.955,464,2800,1800,4800,False,None,45.0
+SOL-LOC-044,MIDC Chincholi Textile Dyeing Sector B,Industrial,Solapur,Maharashtra,India,17.712,75.962,465,3100,1950,5200,False,None,48.0
+SOL-LOC-045,MIDC Akkalkot Road Textile Processing Unit,Industrial,Solapur,Maharashtra,India,17.646,75.945,450,4200,1400,2200,False,None,52.0
+SOL-LOC-046,MIDC Akkalkot Road Garment Cluster,Industrial,Solapur,Maharashtra,India,17.641,75.949,449,4500,1550,2400,False,None,50.0
+SOL-LOC-047,Hotgi Road Industrial Area Rolling Mills,Industrial,Solapur,Maharashtra,India,17.632,75.922,455,3800,1200,2600,False,None,47.0
+SOL-LOC-048,Solapur Spinning Mill Industrial Zone,Industrial,Solapur,Maharashtra,India,17.649,75.939,451,4600,1300,1800,False,None,53.0
+SOL-LOC-049,Laxmi Cooperative Industrial Estate,Industrial,Solapur,Maharashtra,India,17.658,75.942,452,5100,1150,1500,False,None,55.0
+SOL-LOC-050,Old Bidi Works Industrial Sheds,Industrial,Solapur,Maharashtra,India,17.661,75.928,453,5800,950,1300,False,None,64.0
+SOL-LOC-051,Degaon Industrial Scrap Yard,Industrial,Solapur,Maharashtra,India,17.629,75.854,471,2400,1600,3100,False,None,42.0
+SOL-LOC-052,Kumtha Naka Engineering Works,Industrial,Solapur,Maharashtra,India,17.638,75.931,452,4900,1100,1900,False,None,54.0
+SOL-LOC-053,Chincholi Agro Processing Plant,Industrial,Solapur,Maharashtra,India,17.702,75.948,462,3300,1650,4200,False,None,43.0
+SOL-LOC-054,Bale Railway Siding Heavy Freight Depot,Industrial,Solapur,Maharashtra,India,17.711,75.869,467,2100,1750,3900,False,None,39.0
+SOL-LOC-055,Saat Rasta Traffic Rotary Junction,Road,Solapur,Maharashtra,India,17.6515,75.904,459,12000,420,1850,False,None,44.0
+SOL-LOC-056,Ashok Chowk Signal Intersection,Road,Solapur,Maharashtra,India,17.658,75.918,455,15000,560,1300,False,None,52.0
+SOL-LOC-057,Old Poona Naka Flyover Corridor,Road,Solapur,Maharashtra,India,17.678,75.897,458,14000,620,1650,False,None,43.0
+SOL-LOC-058,Pune-Solapur Highway Junction (NH 65),Road,Solapur,Maharashtra,India,17.689,75.882,463,8500,780,2500,False,None,36.0
+SOL-LOC-059,Hyderabad Road Ring Intersection,Road,Solapur,Maharashtra,India,17.672,75.938,452,9200,850,2100,False,None,41.0
+SOL-LOC-060,Bijapur Road Toll Tollway Corridor,Road,Solapur,Maharashtra,India,17.612,75.871,469,7200,920,4100,False,None,34.0
+SOL-LOC-061,Samrat Chowk Arterial Crossing,Road,Solapur,Maharashtra,India,17.661,75.9135,455,16500,690,1150,False,None,50.0
+SOL-LOC-062,Hotgi Road Railway Overbridge,Road,Solapur,Maharashtra,India,17.644,75.918,456,11500,510,1900,False,None,42.0
+SOL-LOC-063,Kumtha Naka Traffic Roundabout,Road,Solapur,Maharashtra,India,17.642,75.927,453,13500,480,1550,False,None,47.0
+SOL-LOC-064,Degaon Naka Ring Road Segment,Road,Solapur,Maharashtra,India,17.631,75.868,468,8000,650,2800,False,None,38.0
+SOL-LOC-065,Shelgi Naka Traffic Interchange,Road,Solapur,Maharashtra,India,17.689,75.922,457,10500,410,1800,False,None,40.0
+SOL-LOC-066,Akkalkot Naka Commercial Junction,Road,Solapur,Maharashtra,India,17.655,75.935,452,14000,620,1450,False,None,49.0
+SOL-LOC-067,Kegaon Bypass Highway Link,Road,Solapur,Maharashtra,India,17.696,75.845,474,6500,980,4200,False,None,30.0
+SOL-LOC-068,Railway Station Approach Boulevard,Road,Solapur,Maharashtra,India,17.6715,75.9185,453,18000,590,1100,True,Trees,48.0
+SOL-LOC-069,Hutatma Smarak Municipal Memorial Garden,Park,Solapur,Maharashtra,India,17.657,75.908,457,1200,0,750,True,Park,25.0
+SOL-LOC-070,Smruti Udyan Botanical Park,Park,Solapur,Maharashtra,India,17.649,75.901,459,950,0,1600,True,Park,22.0
+SOL-LOC-071,Indira Gandhi Stadium Green Belt,Park,Solapur,Maharashtra,India,17.654,75.911,456,1800,0,950,True,Park,28.0
+SOL-LOC-072,Shelgi Forest Department Nursery,Park,Solapur,Maharashtra,India,17.701,75.922,460,400,0,2400,True,Park,18.0
+SOL-LOC-073,Sambhaji Lake Promenade Garden,Park,Solapur,Maharashtra,India,17.638,75.882,464,1100,0,120,True,Park,24.0
+SOL-LOC-074,Siddheshwar Lake Waterfront Garden,Park,Solapur,Maharashtra,India,17.6645,75.9115,454,1600,0,80,True,Park,26.0
+SOL-LOC-075,Police Grounds Ecological Pocket,Park,Solapur,Maharashtra,India,17.662,75.9,458,800,0,1400,True,Park,25.0
+SOL-LOC-076,Jule Solapur Central Children's Park,Park,Solapur,Maharashtra,India,17.634,75.899,461,2100,0,2600,True,Park,30.0
+SOL-LOC-077,Degaon Community Woodland Park,Park,Solapur,Maharashtra,India,17.628,75.866,469,650,0,2700,True,Park,23.0
+SOL-LOC-078,Old Solapur Fort Heritage Lawn,Park,Solapur,Maharashtra,India,17.6655,75.9095,455,1400,0,250,True,Park,27.0
+SOL-LOC-079,Solapur University Campus Academic Zone,Educational,Solapur,Maharashtra,India,17.682,75.842,475,4200,120,3900,True,Trees,22.0
+SOL-LOC-080,Walchand Institute of Technology Campus,Educational,Solapur,Maharashtra,India,17.671,75.911,455,7500,240,1150,True,Trees,31.0
+SOL-LOC-081,Dayanand College Campus Enclave,Educational,Solapur,Maharashtra,India,17.661,75.918,455,6800,210,1200,True,Trees,33.0
+SOL-LOC-082,Government Polytechnic Solapur Campus,Educational,Solapur,Maharashtra,India,17.653,75.907,458,5900,260,1500,True,Trees,29.0
+SOL-LOC-083,Dr. Vaishampayan Memorial Govt Medical College,Educational,Solapur,Maharashtra,India,17.6685,75.916,454,8800,310,1050,True,Trees,46.0
+SOL-LOC-084,Sangameshwar College Historic Quadrangle,Educational,Solapur,Maharashtra,India,17.673,75.909,456,6200,280,1250,True,Trees,32.0
+SOL-LOC-085,DAV Velvet Lawn School Campus,Educational,Solapur,Maharashtra,India,17.64,75.892,463,4800,220,2600,True,Trees,28.0
+SOL-LOC-086,North Maharashtra Agricultural School Farm,Educational,Solapur,Maharashtra,India,17.705,75.905,462,1800,80,3100,True,Trees,20.0
+SOL-LOC-087,Solapur Central Railway Station Terminal,Transport,Solapur,Maharashtra,India,17.6735,75.9165,453,14500,710,1250,True,Shade Structure,58.0
+SOL-LOC-088,MSRTC Central Bus Stand (CBS) Concourse,Transport,Solapur,Maharashtra,India,17.669,75.902,457,16800,640,1450,True,Shade Structure,62.0
+SOL-LOC-089,Old Bus Stand Regional Depot,Transport,Solapur,Maharashtra,India,17.6625,75.9105,455,15200,680,1100,False,None,60.0
+SOL-LOC-090,Solapur Goods Railway Yard Marshalling Area,Transport,Solapur,Maharashtra,India,17.679,75.925,452,5400,1100,1600,False,None,46.0
+SOL-LOC-091,Solapur Airport Hotgi Road Runway Apron,Transport,Solapur,Maharashtra,India,17.627,75.934,457,1200,1450,2900,False,None,22.0
+SOL-LOC-092,Truck Transport Nagar Logistics Depot,Transport,Solapur,Maharashtra,India,17.695,75.892,461,6200,1250,2400,False,None,44.0
+SOL-LOC-093,Siddheshwar Lake Waterfront & Temple Moat,Waterbody,Solapur,Maharashtra,India,17.664,75.911,453,3500,50,0,True,Water Feature,30.0
+SOL-LOC-094,Kambar Talav Freshwater Wetland Basin,Waterbody,Solapur,Maharashtra,India,17.645,75.91,454,2100,60,0,True,Water Feature,25.0
+SOL-LOC-095,Hipparga Lake (Ekruk Tank) Embankment Shore,Waterbody,Solapur,Maharashtra,India,17.722,75.905,456,850,80,0,True,Water Feature,18.0
+SOL-LOC-096,Sambhaji Lake Perimeter Edge,Waterbody,Solapur,Maharashtra,India,17.6375,75.8815,463,2800,70,0,True,Water Feature,26.0
+SOL-LOC-097,Shelgi Peripheral Scrubland Outskirts,Open Land,Solapur,Maharashtra,India,17.708,75.938,463,450,850,2800,False,None,18.0
+SOL-LOC-098,Degaon Barren Ridge Fallow Scrub,Open Land,Solapur,Maharashtra,India,17.618,75.848,476,320,980,3600,False,None,16.0
+SOL-LOC-099,Bale Northern Semi-Arid Fallow Patch,Open Land,Solapur,Maharashtra,India,17.716,75.882,468,380,1100,3800,False,None,17.0
+SOL-LOC-100,Kegaon Western Open Grassland Buffer,Open Land,Solapur,Maharashtra,India,17.691,75.836,477,280,1200,4200,False,None,15.0
