@@ -1,5 +1,7 @@
 <p align="center">
-  🇮🇳 <b>Made For Indians — Made By Indians</b> 🇮🇳
+  <img src="Banner%20%26%20Logo/India's%20Flag.png" alt="India's Flag" width="32" valign="middle">
+  &nbsp;&nbsp;<b>Made For Indians — Made By Indians</b>&nbsp;&nbsp;
+  <img src="Banner%20%26%20Logo/India's%20Flag.png" alt="India's Flag" width="32" valign="middle">
 </p>
 
 <p align="center">
