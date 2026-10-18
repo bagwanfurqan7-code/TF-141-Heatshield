@@ -1,0 +1,281 @@
+TF-141 HEATSHIELD PROJECT
+ROLE DISTRIBUTION, EDA PLAN, AND RECOMMENDED IMPROVEMENTS
+MIT Vishwaprayag University (MIT-VPU)
+Team: TF-141
+
+TEAM MEMBERS
+- Furqan Bagwan — SCFU425004 — Frontend
+- Aman Shaikh — SCFU425013 — EDA & Data Visualization (EDADV)
+- Bhavin Shankur — SCFU425014 — Backend and Database
+
+PROJECT SUMMARY
+HeatShield is an academic urban heat exposure analysis and cooling-intelligence platform. It will organize documented temperature and related environmental data, analyze patterns, and present findings through a clear web dashboard. The initial study focus is Solapur, Maharashtra, but the final geographic scope must match the selected dataset. Do not label data from other places as Solapur data. Clearly distinguish measured observations, derived indicators, user-submitted readings, and illustrative/demo data.
+
+============================================================
+1. WHAT AMAN SHOULD DO FOR EDADV
+============================================================
+
+EDADV means Exploratory Data Analysis and Data Visualization. Aman’s role is not just to make charts. He should produce a reproducible analysis workflow, explain what the data says, and document limitations so the dashboard’s conclusions are evidence-based.
+
+A. Dataset research and selection
+1. Find one primary dataset and, only if useful and compatible, a supplementary dataset.
+2. Record the source URL, publisher/author, license/usage terms, date downloaded, time period, geographic coverage, units, and data dictionary.
+3. Confirm whether Solapur is actually represented. If not, either change the study area to match the dataset or clearly treat Solapur-specific features as unavailable until suitable data is found.
+4. Identify whether each temperature value is a station observation, satellite-derived surface temperature, modelled/reanalysis data, or a user-submitted reading. These are different measurements and must not be presented as interchangeable.
+5. Keep the original raw file unchanged and create a separate cleaned dataset.
+
+B. Data profiling and cleaning (Python, Pandas, NumPy)
+1. Inspect row and column counts, column names, data types, units, date ranges, and unique locations.
+2. Check missing values, duplicate records, invalid coordinates, impossible or suspicious values, inconsistent units, and inconsistent location labels.
+3. Review potential outliers. Do not delete unusual values automatically; investigate and document the reason for retaining, flagging, or excluding them.
+4. Convert dates and numeric fields to consistent types and standardize units where justified.
+5. Document every cleaning rule and report row counts before and after cleaning.
+6. Export a clean CSV or other agreed data file for database loading, plus a data dictionary.
+
+C. Analysis questions and outputs
+1. How does temperature vary over time?
+   - Line chart by date/time, if repeated time observations exist.
+2. What is the temperature distribution?
+   - Histogram, box plot, mean, median, minimum, maximum, quartiles, and standard deviation where appropriate.
+3. How do values differ across available locations?
+   - Ranked table, grouped bar chart, or box plot, only where there are enough comparable observations.
+4. Are temperature and other variables associated?
+   - Scatter plots and correlation matrix for suitable numeric fields; explain that correlation does not prove causation.
+5. Which locations have the highest recorded values or a high selected heat indicator?
+   - Ranked table or map if valid location identifiers/coordinates exist.
+6. How reliable and complete is the dataset?
+   - Missingness chart/table, duplicate count, outlier review, coverage summary, and data-quality notes.
+7. Are there differences by month, season, or time of day?
+   - Monthly/seasonal summaries only if the date coverage and time fields support them.
+8. What does the dataset NOT tell us?
+   - State gaps such as no vegetation data, no neighborhood-level coordinates, limited dates, or no direct measurement of human heat exposure.
+
+D. Recommended EDA deliverables
+- A Jupyter Notebook (.ipynb) or reproducible Python scripts.
+- Raw-data source note and dataset citation.
+- Data dictionary and cleaning log.
+- Cleaned dataset for the shared database.
+- Summary statistics and data-quality report.
+- At least 4–6 meaningful charts, chosen based on available fields rather than an arbitrary chart count.
+- Short findings report: key findings, evidence, limitations, and recommended next steps.
+- Exported chart images for the report and/or dashboard if needed.
+- README instructions explaining how to rerun the analysis.
+
+Suggested folder:
+EDADV/
+  data/
+    raw/
+    processed/
+  notebooks/
+    heatshield_eda.ipynb
+  src/
+    clean_data.py
+    analyze_data.py
+  outputs/
+    charts/
+    data_quality_report.csv
+    summary_statistics.csv
+  docs/
+    dataset_card.md
+    findings_report.md
+    cleaning_log.md
+
+============================================================
+2. RECOMMENDED PROJECT ARCHITECTURE
+============================================================
+
+Keep one agreed data flow:
+Documented dataset and approved user readings
+        -> validation and cleaning
+        -> relational database
+        -> backend API
+        -> frontend dashboard and map
+
+EDA should use a reproducible copy of the same documented source data that feeds the database. User-submitted readings should be identified separately from trusted external datasets and should not silently become part of the official dataset or analysis. The team should agree how and when accepted user readings are included in future EDA runs.
+
+IMPORTANT STACK DECISION:
+The written proposal specifies React + Vite + JavaScript + Tailwind CSS, Python + Flask REST API, and MySQL. The implementation notes mention Supabase for the database/storage. Decide on the final architecture with faculty/team before building. Avoid building two competing database systems.
+
+Recommended simple option if Supabase is required:
+- Frontend: React + Vite + JavaScript + Tailwind CSS.
+- Backend: Flask REST API for validation, business rules, and EDA/data endpoints.
+- Database: Supabase Postgres (not MySQL) as the single shared database.
+- Authentication: Supabase Auth with email confirmation.
+- File storage: Supabase Storage for approved uploads and generated reports, if needed.
+- Python analysis: Pandas, NumPy, Matplotlib/Seaborn only if allowed by course requirements.
+- Charts in web UI: Recharts.
+- Map: a map library and a permitted tile/data provider, selected after reviewing terms and data availability.
+
+Alternative if the faculty requires MySQL:
+- Use MySQL as the project database.
+- Choose and document a separate authentication approach and email service.
+- Do not describe Supabase Postgres as the database in this option.
+- If Supabase Storage is used only for files, document that separation clearly.
+- Confirm with faculty whether this split is acceptable.
+
+Supabase is a hosted service, so data sent to it leaves the local computer and is stored in the configured Supabase project. Do not promise “local-only” privacy if the app uses hosted Supabase.
+
+============================================================
+3. FRONTEND IMPROVEMENTS — FURQAN
+============================================================
+
+Design direction
+- Use Google Stitch to create the visual design and agree on the page structure before implementation.
+- Aim for a clean, minimal, bold but restrained interface with readable typography, strong contrast, consistent spacing, and accessible controls.
+- Use one primary accent color and a heat scale with a clear legend. Avoid excessive animations, gradients, cards, and decorative elements.
+- Make the interface responsive on mobile, tablet, and desktop.
+- Include loading, empty, error, and success states. Add tooltips/help text where a first-time user might be confused.
+- Provide a clear navigation bar, page titles, breadcrumbs where useful, and a consistent footer.
+
+Suggested pages
+1. Home / Overview: project purpose, data coverage, latest available period, and a clear route into the dashboard.
+2. Dashboard: summary cards and selected charts based on actual database results.
+3. Explore Data: filter by date, location, source, and variable; show a clear no-results state.
+4. India Heat Map: display the geographic coverage that the selected data actually supports.
+5. 3D View: optional enhancement only after a reliable geographic layer and meaningful values are available.
+6. Submit a Reading: form to submit temperature, timestamp, and location, with clear source labeling.
+7. Methodology / About Data: explain data sources, units, map meaning, update frequency, and limitations.
+8. Account: sign up, email confirmation, login, logout, and profile/settings as required.
+9. Admin / Review: optional protected page to review suspicious or duplicate community-submitted readings.
+
+Heat map and 3D view safeguards
+- Do not create a red/orange “temperature map of India” by coloring states unless the values genuinely correspond to those states and the method is documented.
+- A thermal-looking color ramp is only a visual encoding; it does not make data a thermal satellite image.
+- If the data contains only a few weather stations, show station points or an appropriately labelled interpolation only if the method is defensible. Do not imply full geographic coverage.
+- Label whether values represent air temperature, land-surface temperature, forecast/reanalysis, or user-submitted measurements.
+- Show units (°C), timestamp/time period, source, and legend. Make missing-data regions visibly different from low-temperature regions.
+- Treat 3D as a stretch goal. A 2D map with trustworthy data, clear filters, and a legend is more valuable than a misleading 3D effect.
+
+User-submitted temperature readings
+- Ask permission before accessing device location; provide a manual location option if permission is denied.
+- Browser geolocation provides coordinates, not a verified temperature reading. The user must enter the measured temperature or select an explicitly labelled supported source.
+- Capture timestamp, latitude/longitude or selected place, temperature value, unit, source/method, and optional notes.
+- Validate coordinate ranges, allowed units, plausible value ranges, required fields, and duplicate submissions.
+- Show a preview before submission and a confirmation after the server accepts it.
+- Make clear that user-submitted values are community reports, not automatically verified official observations.
+- Do not let users edit or delete other users’ readings unless they have an authorized moderator/admin role.
+- Do not expose email addresses or unnecessary personal information on public maps.
+
+============================================================
+4. BACKEND AND DATABASE IMPROVEMENTS — BHAVIN
+============================================================
+
+A. Authentication
+- Implement registration, login, logout, session handling, and email confirmation.
+- Send confirmation links through the chosen auth/email provider; test the real delivery path and spam-folder behavior.
+- Require a confirmed email where appropriate before allowing submissions.
+- Add password reset if supported by the selected auth approach.
+- Never store plaintext passwords or expose secret service-role keys in frontend code.
+- Protect secrets with environment variables and keep .env out of Git.
+- Test authorization on the server/API, not only by hiding frontend buttons.
+
+B. Data model
+Design the schema after the dataset is selected. A possible starting model is:
+- profiles: user profile and role, linked to the auth user identifier.
+- locations: location name, administrative level, latitude, longitude, and source/coverage notes.
+- datasets: source name, source URL, license, download date, time coverage, and methodology.
+- observations: location/dataset references, timestamp, temperature value, unit, measurement type, and quality flag.
+- user_submissions: submitted_by, timestamp, coordinates/location, temperature, unit, source/method, status, and review metadata.
+- analysis_runs or assessment_results: run date, method/version, filters/coverage, and derived summary values.
+Use primary keys, foreign keys, NOT NULL, CHECK constraints where supported, indexes for common filters, and documented relationships. Normalize appropriately; do not duplicate location or dataset metadata in every row without reason.
+
+C. API responsibilities
+- Provide endpoints for dashboard summaries, filtered observations, location lists, chart-ready time series, data submission, and authorized moderation.
+- Validate and normalize all incoming data on the server.
+- Use parameterized database operations or the provider’s safe client methods; do not build SQL by concatenating user input.
+- Return consistent HTTP status codes and useful error messages without leaking secrets or stack traces.
+- Add pagination/limits for large data queries and validate sort/filter parameters.
+- Make the API return source, unit, timestamp, and quality/status information needed for honest chart labels.
+
+D. Database synchronization
+- Create, read, update, and delete operations should affect the intended database records and be reflected in subsequent API/dashboard reads.
+- Use database migrations or version-controlled schema setup so teammates can reproduce the schema.
+- Define who can insert, edit, approve, and delete each category of record.
+- Add audit fields such as created_at and updated_at. For moderated readings, record reviewer and review time.
+- If Supabase is used, configure Row Level Security (RLS) policies. Never rely on frontend-only permissions.
+- Separate trusted imported observations from community submissions, and preserve provenance.
+- Define a backup/export plan suitable for the academic project.
+
+E. Storage
+- Use database tables for structured observations and metadata.
+- Use object/file storage only for files such as approved CSV uploads, reports, or exports.
+- Define allowed file types and size limits; validate uploads and do not trust file names or MIME types alone.
+- Set storage access rules so private files are not public by default.
+- Do not store secrets or unnecessary personal data in uploaded files.
+
+F. Testing
+- Registration and email confirmation flow.
+- Login/logout and protected routes/API endpoints.
+- Valid and invalid readings, missing fields, invalid coordinates, unsupported units, and duplicate submissions.
+- User A cannot modify User B’s private submissions.
+- Anonymous users cannot access protected operations.
+- Database constraints, foreign keys, pagination, and filtered queries.
+- Dashboard values match database query results.
+- Error handling when email, database, or API is unavailable.
+
+============================================================
+5. IMPROVEMENTS FOR THE WHOLE PROJECT
+============================================================
+
+1. Confirm the dataset before finalizing the map or analysis. Record source, license, geographic coverage, date range, units, and measurement type.
+2. Define the minimum viable project first: reliable dataset, relational schema, reproducible EDA, 2D map or location chart if supported, dashboard, and authentication/submission flow.
+3. Keep the 3D India heat map, advanced interpolation, and complex cooling recommendations as stretch goals.
+4. Use a single source of truth for observations. Agree on how imported data and user submissions are stored and analyzed.
+5. Distinguish air temperature from land-surface temperature. They measure different things and should not be compared without context.
+6. Use an honest “data unavailable” state rather than filling missing areas with invented values.
+7. For cooling priorities, create a transparent scoring rule only when suitable variables exist. Publish the variables, weights, assumptions, and limitations. Otherwise present a “candidate for further assessment” list rather than a definitive ranking.
+8. Add a data freshness label and show the latest timestamp covered by the dataset.
+9. Add accessible colors, text labels, keyboard-friendly controls, and mobile layouts.
+10. Include automated tests for API validation and database rules, plus a manual demo checklist.
+11. Use GitHub branches and pull requests. Agree on shared API contracts and database field names before parallel work begins.
+12. Maintain a README with setup instructions, environment variable examples (without real secrets), architecture diagram, dataset citation, ER diagram, API endpoints, and known limitations.
+13. Add a clear disclaimer: HeatShield is an academic decision-support prototype, not an official heat-alert system or a substitute for professional environmental assessment.
+
+============================================================
+6. TEAM INTEGRATION PLAN
+============================================================
+
+Furqan — Frontend
+- Build Stitch-approved page designs and reusable components.
+- Implement responsive pages, filters, charts, map, and submission form.
+- Integrate with agreed API endpoints; do not hardcode fake dashboard numbers as real results.
+- Display source, unit, timestamp, coverage, loading/error/empty states.
+
+Aman — EDADV
+- Select and document the dataset with Bhavin’s input.
+- Build the cleaning and EDA notebook/scripts.
+- Provide the cleaned data, data dictionary, cleaning log, charts, summary tables, and findings report.
+- Explain which fields are suitable for the map and cooling-priority logic.
+
+Bhavin — Backend and Database
+- Finalize schema and migrations with the team.
+- Implement database connection, API, authentication, authorization, and email confirmation.
+- Implement validation and secure submission/moderation workflows.
+- Coordinate with Aman on data fields and with Furqan on API response formats.
+- Test data integrity and end-to-end flows.
+
+Shared milestones
+Phase 1 — Agreement and design:
+- Confirm dataset, measurement definitions, stack, database choice, ER diagram draft, UI wireframes, and API contract.
+Phase 2 — Working integration:
+- Load a small verified dataset; complete core EDA; build database/API; connect dashboard and filters; test registration and submission.
+Phase 3 — Finalization:
+- Validate calculations; finish documentation; run end-to-end tests; prepare screenshots, demo script, and viva answers.
+
+============================================================
+7. AGREEMENTS TO MAKE BEFORE CODING
+============================================================
+
+The team should explicitly decide:
+- Which exact dataset is the primary source, and what is its license?
+- Does it contain India-wide data, Solapur data, coordinates, timestamps, and the variables required for the planned map?
+- Is the database MySQL or Supabase Postgres? The proposal and implementation notes currently differ.
+- Is Flask the required backend even if Supabase Auth and Postgres are used?
+- Which service sends confirmation emails, and how will it be tested?
+- Are user-submitted readings visible immediately, or only after review?
+- Can users edit/delete their own submissions? Who moderates questionable records?
+- Which features are required for the assessment, and which are stretch goals?
+- What exactly does the map color represent, and how are missing values shown?
+
+FINAL RECOMMENDATION
+Build a trustworthy, fully working 2D dashboard and data pipeline first. The strongest academic project is not the one with the most visual effects; it is the one where every chart and map value has a traceable source, the EDA can be reproduced, the database is well designed, and the frontend accurately explains the results. Add the 3D map only after the dataset and 2D visualization are reliable. 
