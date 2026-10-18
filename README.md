@@ -1,4 +1,8 @@
 <p align="center">
+  🇮🇳 <b>Made For Indians — Made By Indians</b> 🇮🇳
+</p>
+
+<p align="center">
   <img src="Banner%20%26%20Logo/heatshield-logo-primary.svg" alt="HeatShield Logo" width="220">
 </p>
 
